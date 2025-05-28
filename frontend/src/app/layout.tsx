@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${GeistSans.className} ${GeistMono.className} antialiased bg-background text-foreground`}>
+      <body className={`${GeistSans.className} ${GeistMono.className}
+        bg-gradient-to-br from-background via-primary/5 to-background
+        min-h-screen antialiased`}>
         <AuthProvider>{children}</AuthProvider>
       </body>
     </html>

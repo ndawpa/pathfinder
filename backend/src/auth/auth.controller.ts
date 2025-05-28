@@ -15,6 +15,12 @@ interface RequestWithUser extends Request {
 export class AuthController {
   constructor(private authService: AuthService) {}
 
+  @Post('register')
+  async register(@Body() registerDto: { email: string; password: string; firstName: string; lastName: string }) {
+    const user = await this.authService.register(registerDto);
+    return this.authService.login(user); // Auto-login after registration
+  }
+
   @Post('login')
   async login(@Body() loginDto: { email: string; password: string }) {
     const user = await this.authService.validateUser(

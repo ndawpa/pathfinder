@@ -9,10 +9,26 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'hsl(263 70% 50%)',
+          foreground: 'hsl(210 40% 98%)',
+        },
+        secondary: {
+          DEFAULT: 'hsl(210 70% 45%)',
+          foreground: 'hsl(210 40% 98%)',
+        },
+        accent: {
+          DEFAULT: 'hsl(327 90% 45%)',
+          foreground: 'hsl(210 40% 98%)',
+        },
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 } satisfies Config;

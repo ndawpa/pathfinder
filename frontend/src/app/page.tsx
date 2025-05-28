@@ -1,51 +1,32 @@
-export default function Home() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto space-y-12">
-          {/* Hero Section */}
-          <div className="text-center space-y-6">
-            <h1 className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400">
-              Welcome to Pathfinder
-            </h1>
-            <p className="text-xl text-gray-300">
-              Your journey to efficient path planning starts here
-            </p>
-          </div>
+    <main className="min-h-screen p-8 bg-gradient-to-br from-background via-primary/5 to-background">
+      <div className="max-w-4xl mx-auto space-y-8">
+        <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">Welcome to Pathfinder</h1>
+        <p className="text-lg text-foreground/80">Your journey to efficient path planning starts here</p>
+        
+        <div className="flex gap-4">
+          <a href="#" className="btn-primary">Sign In</a>
+          <a href="#" className="btn-secondary">Create Account</a>
+        </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/login"
-              className="px-8 py-4 bg-blue-500 rounded-lg text-lg font-semibold hover:bg-blue-600 transition-all transform hover:scale-105 text-center"
-            >
-              Sign In
-            </a>
-            <a
-              href="/register"
-              className="px-8 py-4 bg-transparent border-2 border-blue-400 rounded-lg text-lg font-semibold hover:bg-blue-400/10 transition-all transform hover:scale-105 text-center"
-            >
-              Create Account
-            </a>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          <div className="card-modern p-6">
+            <h2 className="text-2xl font-semibold text-primary mb-2">Plan Routes</h2>
+            <p className="text-foreground/70">Create and optimize your journey paths efficiently</p>
           </div>
-
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all transform hover:-translate-y-1">
-              <h3 className="text-xl font-bold mb-4 text-blue-400">Plan Routes</h3>
-              <p className="text-gray-300">Create and optimize your journey paths efficiently</p>
-            </div>
-            <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all transform hover:-translate-y-1">
-              <h3 className="text-xl font-bold mb-4 text-blue-400">Track Progress</h3>
-              <p className="text-gray-300">Monitor your journey progress in real-time</p>
-            </div>
-            <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all transform hover:-translate-y-1">
-              <h3 className="text-xl font-bold mb-4 text-blue-400">Analyze Data</h3>
-              <p className="text-gray-300">Get insights from your path analytics</p>
-            </div>
+          
+          <div className="card-modern p-6">
+            <h2 className="text-2xl font-semibold text-primary mb-2">Track Progress</h2>
+            <p className="text-foreground/70">Monitor your journey progress in real-time</p>
+          </div>
+          
+          <div className="card-modern p-6">
+            <h2 className="text-2xl font-semibold text-primary mb-2">Analyze Data</h2>
+            <p className="text-foreground/70">Get insights from your path analytics</p>
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
