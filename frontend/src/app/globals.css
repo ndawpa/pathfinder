@@ -14,8 +14,14 @@
   }
 }
 
+/* You can remove or comment out the body styles below 
+   if they are conflicting with Tailwind's defaults or 
+   the font settings in layout.tsx 
+*/
+/*
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+*/
