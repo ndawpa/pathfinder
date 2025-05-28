@@ -1,17 +1,19 @@
-FROM node:18-alpine AS builder
+FROM node:20-alpine AS builder
 
 WORKDIR /app
 
 # Install dependencies first (better caching)
 COPY package*.json ./
-RUN npm ci --only=production
+RUN npm ci
 
 # Copy source and build
 COPY . .
+ENV NODE_OPTIONS="--max_old_space_size=3072"
+ENV NODE_ENV="production"
 RUN npm run build
 
 # Production image
-FROM node:18-alpine
+FROM node:20-alpine
 WORKDIR /app
 
 # Copy only necessary files
